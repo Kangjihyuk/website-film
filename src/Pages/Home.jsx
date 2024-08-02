@@ -1,6 +1,5 @@
-import { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { getAllMovie } from "../api/api";
-import { useState } from "react";
 
 const Home = () => {
   const [movie, setMovie] = useState([]);
@@ -10,15 +9,8 @@ const Home = () => {
     });
   }, []);
   console.log(movie);
-  return (
-    <div>
-      {movie.map((data) => (
-        <ul key={data.id}>
-          <li>{data.title}</li>
-        </ul>
-      ))}
-    </div>
-  );
+
+  return <div></div>;
 };
 
 export default Home;
