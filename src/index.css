@@ -1,3 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.menuButton input[type="checkbox"]:checked ~ .top {
+    transform: translateY(245%) rotate(45deg);
+    width: 30px;
+}
+
+.menuButton input[type="checkbox"]:checked ~ .mid {
+    transform: translateX(-20px);
+    opacity: 0;
+}
+
+.menuButton input[type="checkbox"]:checked ~ .bot {
+    transform: translateY(-245%) rotate(-45deg);
+    width: 30px;
+    box-shadow: 0 0 10px #495057;
+}
+
+.menuButton.active {
+    box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+.btn::after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #2563eb;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+  }
+  
+  .btn:focus::after,
+  .btn:hover::after {
+    width: 100%;
+    left: 0%;
+  }

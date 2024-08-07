@@ -1,16 +1,17 @@
-import React, { useEffect, useState } from "react";
-import { getAllMovie } from "../api/api";
+import { Fragment } from "react";
+import Navbar from "../components/Layouts/Navbar";
+import { useState } from "react";
 
 const Home = () => {
-  const [movie, setMovie] = useState([]);
-  useEffect(() => {
-    getAllMovie((data) => {
-      setMovie(data);
-    });
-  }, []);
-  console.log(movie);
-
-  return <div></div>;
+  const [show, setShow] = useState(false);
+  const handleShow = () => {
+    setShow(!show);
+  };
+  return (
+    <Fragment>
+      <Navbar handleShow={() => handleShow()} show={show} />
+    </Fragment>
+  );
 };
 
 export default Home;
