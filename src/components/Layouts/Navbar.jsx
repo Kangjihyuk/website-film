@@ -8,10 +8,10 @@ const Navbar = (props) => {
   const { handleShow, show } = props;
   return (
     <Fragment>
-      <div className="p-[0.500rem] flex items-center justify-between fixed w-full z-50 bg-slate-200">
+      <div className="p-[0.500rem]  flex items-center justify-between fixed w-full z-50 bg-slate-50">
         <Logo />
         <div className="flex gap-2 md:flex-row-reverse items-center">
-          <Button btn="login" classname="py-1 px-4" />
+          <Button btn="login" classname="p-1 poppins-bold" />
           <Hamburger handleShow={handleShow} classname="md:hidden" />
           <NavLinks show={show ? "block" : "hidden"} />
         </div>

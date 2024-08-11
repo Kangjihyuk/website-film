@@ -1,10 +1,9 @@
-import React from "react";
-import { FcFilmReel } from "react-icons/fc";
+import { MdOutlineModeOfTravel } from "react-icons/md";
 const Logo = () => {
   return (
-    <i className="text-3xl">
-      <FcFilmReel />
-    </i>
+    <a href="#" className="text-3xl">
+      <MdOutlineModeOfTravel />
+    </a>
   );
 };
 
