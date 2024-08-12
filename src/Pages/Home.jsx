@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <Fragment>
       <Navbar handleShow={() => handleShow()} show={show} />
-      <Header />
+      <Header id="home" />
       <PopularPlace />
     </Fragment>
   );
