@@ -1,4 +1,4 @@
-import { Children, Fragment } from "react";
+import { Fragment } from "react";
 import { FaStar } from "react-icons/fa6";
 
 const CardDestinations = ({ children }) => {
