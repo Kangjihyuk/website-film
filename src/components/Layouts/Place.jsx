@@ -1,24 +1,21 @@
 import { Fragment, useEffect, useState } from "react";
 import Title from "../Elements/Title/Title";
-import { getSingleDestination } from "../../api/api";
 import CardDestinations from "../Fragments/CardDestinations";
 import LinkCountry from "../Fragments/LinkCountry";
-
-const PopularPlace = () => {
+import { getSingleDestination } from "../../api/api.js";
+const Place = ({ id, classname, title }) => {
   const [destinations, setDestinations] = useState([]);
 
   useEffect(() => {
-    getSingleDestination((data) => {
+    getSingleDestination(id, (data) => {
       setDestinations(data);
     });
-  }, []);
-
-  console.log(destinations);
+  }, [id]);
   return (
     <Fragment>
-      <div className="mt-28 container sm:mt-56 md:mt-0 ">
+      <div className={`container ${classname}`}>
         <div className="md:flex md:justify-between">
-          <Title title="Popular Place" />
+          <Title title={title} />
           <LinkCountry />
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 cursor-pointer">
@@ -40,4 +37,4 @@ const PopularPlace = () => {
   );
 };
 
-export default PopularPlace;
+export default Place;

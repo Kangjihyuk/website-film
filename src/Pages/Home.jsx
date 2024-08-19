@@ -2,20 +2,23 @@ import { Fragment } from "react";
 import Navbar from "../components/Layouts/Navbar";
 import { useState } from "react";
 import Header from "../components/Layouts/Header";
-import PopularPlace from "../components/Layouts/PopularPlace";
 import ExploreAll from "../components/Layouts/ExploreAll";
-
+import Place from "../components/Layouts/Place";
+import CardRate from "../components/Layouts/CardRate";
 const Home = () => {
   const [show, setShow] = useState(false);
   const handleShow = () => {
     setShow(!show);
   };
+
   return (
     <Fragment>
       <Navbar handleShow={() => handleShow()} show={show} />
       <Header />
-      <PopularPlace />
+      <Place id={4} classname="mt-28 sm:mt-56 md:mt-0" title="Popular Place" />
       <ExploreAll />
+      <Place id={8} classname="mt-28 md:mt-32" title="Explore All" />
+      <CardRate />
     </Fragment>
   );
 };

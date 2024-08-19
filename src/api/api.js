@@ -1,8 +1,8 @@
 import axios from "axios";
 
-export const getSingleDestination = (callback) => {
+export const getSingleDestination = (id, callback) => {
   axios
-    .get("https://freetestapi.com/api/v1/destinations?limit=4 ")
+    .get(`https://freetestapi.com/api/v1/destinations?limit=${id}`)
     .then((res) => {
       callback(res.data);
     })
