@@ -5,6 +5,8 @@ import Header from "../components/Layouts/Header";
 import ExploreAll from "../components/Layouts/ExploreAll";
 import Place from "../components/Layouts/Place";
 import CardRate from "../components/Layouts/CardRate";
+import Gallery from "../components/Layouts/Gallery";
+
 const Home = () => {
   const [show, setShow] = useState(false);
   const handleShow = () => {
@@ -19,6 +21,7 @@ const Home = () => {
       <ExploreAll />
       <Place id={8} classname="mt-28 md:mt-32" title="Explore All" />
       <CardRate />
+      <Gallery id={6} />
     </Fragment>
   );
 };

@@ -11,6 +11,7 @@ const Place = ({ id, classname, title }) => {
       setDestinations(data);
     });
   }, [id]);
+
   return (
     <Fragment>
       <div className={`container ${classname}`}>

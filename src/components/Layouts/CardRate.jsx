@@ -27,7 +27,7 @@ const cartRating = [
 const CardRate = () => {
   return (
     <Fragment>
-      <div className="container mt-20 md:mt-36 mb-5 grid grid-cols-2 gap-5 md:grid-cols-4">
+      <div className="container mt-20 md:mt-36 grid grid-cols-2 gap-5 md:grid-cols-4">
         {cartRating.map((item) => (
           <Rate key={item.id} rate={item.rate} title={item.title} />
         ))}

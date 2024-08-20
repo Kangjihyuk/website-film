@@ -35,7 +35,9 @@ export const CardTitle = (props) => {
 
 export const CardDescription = (props) => {
   const { description } = props;
-  return <p className="poppins-light">{description.substring(0, 100)}...</p>;
+  return (
+    <p className="poppins-light mt-2">{description.substring(0, 100)}...</p>
+  );
 };
 
 CardDestinations.CardImage = CardImage;
