@@ -6,6 +6,7 @@ import ExploreAll from "../components/Layouts/ExploreAll";
 import Place from "../components/Layouts/Place";
 import CardRate from "../components/Layouts/CardRate";
 import Gallery from "../components/Layouts/Gallery";
+import Company from "../components/Layouts/Company";
 
 const Home = () => {
   const [show, setShow] = useState(false);
@@ -22,6 +23,7 @@ const Home = () => {
       <Place id={8} classname="mt-28 md:mt-32" title="Explore All" />
       <CardRate />
       <Gallery id={6} />
+      <Company />
     </Fragment>
   );
 };

@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { IoMdSearch } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const Head = ({ title, children }) => {
   return (
@@ -41,8 +42,12 @@ export const Search = () => {
   return (
     <Fragment>
       <span className="flex items-center p-4 text-white bg-primary rounded-e-lg hover:bg-secondary transition-all duration-300 cursor-pointer">
-        <IoMdSearch className="sm:hidden animate-pulse" />
-        <p className="hidden sm:block animate-pulse">Search</p>
+        <Link to={"/search"}>
+          <IoMdSearch className="sm:hidden animate-pulse" />
+        </Link>
+        <Link to={"/search"} className="hidden sm:block animate-pulse">
+          Search
+        </Link>
       </span>
     </Fragment>
   );
