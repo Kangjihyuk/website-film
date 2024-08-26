@@ -151,3 +151,8 @@
     width: 100%;
     left: 0%;
   }
+
+
+  .text{
+    @apply hover:text-secondary duration-300 transition-all cursor-pointer;
+  }

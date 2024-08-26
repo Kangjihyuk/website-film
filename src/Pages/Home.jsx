@@ -7,6 +7,8 @@ import Place from "../components/Layouts/Place";
 import CardRate from "../components/Layouts/CardRate";
 import Gallery from "../components/Layouts/Gallery";
 import Company from "../components/Layouts/Company";
+import Comment from "../components/Layouts/Comment";
+import Footer from "../components/Layouts/Footer";
 
 const Home = () => {
   const [show, setShow] = useState(false);
@@ -24,6 +26,8 @@ const Home = () => {
       <CardRate />
       <Gallery id={6} />
       <Company />
+      <Comment />
+      <Footer />
     </Fragment>
   );
 };
