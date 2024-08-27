@@ -154,5 +154,5 @@
 
 
   .text{
-    @apply hover:text-secondary duration-300 transition-all cursor-pointer;
+    @apply hover:text-secondary duration-300 transition-all cursor-pointer md:text-2xl;
   }
